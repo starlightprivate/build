@@ -5,7 +5,7 @@ nginx:
   ports:
     - "80:80"
 app-server:
-  build: ./dist
+  build: ./app-server
   ports:
     - "8000:8000"
   links:
