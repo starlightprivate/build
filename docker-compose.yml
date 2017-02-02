@@ -4,6 +4,7 @@ nginx:
     - app-server:app-server
   ports:
     - "80:80"
+    - "443:443"
 app-server:
   build: ./app-server
   ports:

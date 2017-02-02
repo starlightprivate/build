@@ -1,3 +1,4 @@
 FROM nginx:latest
 COPY nginx.conf /etc/nginx/nginx.conf
-EXPOSE 80
+COPY blockuseragents.rules /etc/nginx/blockuseragents.rules
+COPY ./ssl/* /etc/nginx/ssl/
