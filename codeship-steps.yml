@@ -1,6 +1,6 @@
 - service: googleclouddeployment
-  command: docker build -t app-builder -f Dockerfile.build /deploy 
+  command: docker build -t app-builder -f Dockerfile.build /deploy
 - service: googleclouddeployment
-  command: run app-builder > app-server.tar.gz
+  command: docker run -i app-builder > app-server.tar.gz
 
   

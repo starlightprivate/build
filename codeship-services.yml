@@ -4,3 +4,4 @@ googleclouddeployment:
   add_docker: true
   volumes:
     - ./:/deploy
+  working_dir: /deploy  
