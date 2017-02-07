@@ -1,6 +1,0 @@
-[submodule "node-api"]
-	path = node-api
-	url = https://github.com/starlightgroup/node-api.git
-[submodule "flashlightsforever"]
-	path = flashlightsforever
-	url = https://github.com/starlightgroup/flashlightsforever.git
