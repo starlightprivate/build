@@ -1,6 +1,7 @@
 - service: googleclouddeployment
+  command: clone.sh
+- service: googleclouddeployment
   command: docker build -t app-builder -f Dockerfile.build /deploy
 - service: googleclouddeployment
   command: docker run -i app-builder > app-server.tar.gz
-
   
