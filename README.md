@@ -15,3 +15,4 @@ Follow these steps to create and combined build for front and back end,  docker 
 - docker-compose build
 - dockcer-compose up
 
+....
