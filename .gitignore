@@ -2,3 +2,6 @@ app-server
 .idea
 .DS_Store
 
+google_deployment.env
+codeship.aes
+deployment.env
