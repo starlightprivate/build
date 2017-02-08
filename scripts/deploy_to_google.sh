@@ -2,7 +2,7 @@
 
 set -e
 
-GOOGLE_CONTAINER_NAME=gcr.io/codeship-production/google-deployment-example
+GOOGLE_CONTAINER_NAME=gcr.io/steady-computer-156807/flashlight-staging
 KUBERNETES_APP_NAME=flashlight-staging
 BUCKET_NAME=gs://flashlights-staging
 UPLOAD_FILE_NAME=$BUCKET_NAME/datefile

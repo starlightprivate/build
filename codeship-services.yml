@@ -5,3 +5,11 @@ googleclouddeployment:
   volumes:
     - ./:/deploy
   working_dir: /deploy  
+deploystaging:
+  build:
+    path: test
+    dockerfile_path: Dockerfile.example
+    image:  gcr.io/steady-computer-156807/flashlight-staging
+gcr_dockercfg:
+  image:  codeship/gcr-dockercfg-generator
+  encrypted_env_file: test/google_deployment.env.encrypted
