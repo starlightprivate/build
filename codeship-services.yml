@@ -8,7 +8,7 @@ googleclouddeployment:
 deploystaging:
   build:
     path: test
-    dockerfile_path: Dockerfile.example
+    dockerfile_path: dockerfile.example
     image:  gcr.io/steady-computer-156807/flashlight-staging
 gcr_dockercfg:
   image:  codeship/gcr-dockercfg-generator
