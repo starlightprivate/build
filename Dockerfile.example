@@ -1,5 +1,6 @@
 FROM node:6.9.4
 RUN mkdir -p /src
+RUN ls mnt
 ADD ./node-api  /src/node-api
 ADD ./flashlightsforever  /src/flashlightsforever
 
