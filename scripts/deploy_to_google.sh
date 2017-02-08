@@ -6,7 +6,7 @@ GOOGLE_CONTAINER_NAME=gcr.io/steady-computer-156807/flashlight-staging
 KUBERNETES_APP_NAME=flashlight-staging
 BUCKET_NAME=gs://flashlights-staging
 UPLOAD_FILE_NAME=$BUCKET_NAME/datefile
-DEFAULT_ZONE=us-central1-a
+DEFAULT_ZONE=us-central1-c
 
 codeship_google authenticate
 
