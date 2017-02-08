@@ -6,7 +6,7 @@ GOOGLE_CONTAINER_NAME=gcr.io/steady-computer-156807/flashlight-staging
 KUBERNETES_APP_NAME=flashlight-staging
 BUCKET_NAME=gs://flashlights-staging
 UPLOAD_FILE_NAME=$BUCKET_NAME/datefile
-DEFAULT_ZONE=us-central1-c
+DEFAULT_ZONE=us-central1-a
 
 codeship_google authenticate
 
@@ -67,7 +67,7 @@ diff datefile datefile_downloaded
 echo "TESTING INTERACTION WITH GOOGLE COMPUTE ENGINE"
 
 echo "Starting an Instance in Google Compute Engine"
-gcloud compute instances create testmachine
+gcloud compute instances create testmachine --image "debian-8-jessie-v20170124" --image-project "debian-cloud"
 
 echo "Stopping an Instance in Google Compute Engine"
 gcloud compute instances delete testmachine -q
