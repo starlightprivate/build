@@ -3,4 +3,4 @@
 	url = git@github.com:starlightgroup/node-api.git
 [submodule "flashlightsforever"]
 	path = flashlightsforever
-	url = git@github.com:starlightgroup/flashflightsforever.git
+	url = git@github.com:starlightgroup/flashlightsforever.git
