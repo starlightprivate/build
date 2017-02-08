@@ -1,3 +1,6 @@
+- name: source
+  service: googleclouddeployment
+  command: /.clone.sh
 - name: build
   service: googleclouddeployment
   command: docker build -t app-builder -f Dockerfile.build /deploy

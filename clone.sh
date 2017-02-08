@@ -1,2 +1,2 @@
-git clone "git@github.com:starlightgroup/flashflightsforever.git"
-git clone "git@github.com:starlightgroup/node-api.git"
+(cd node-api && npm install && npm build)
+(cd flashlightsforever && npm install && npm build && gulp build)
