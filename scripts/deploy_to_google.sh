@@ -17,14 +17,23 @@ gcloud config set compute/zone $DEFAULT_ZONE
 echo "Connect to clusters"
 gcloud container clusters get-credentials flashlight-staging \
     --zone us-east1-b --project steady-computer-156807
+# echo "Removing service $KUBERNETES_APP_NAME"
+# kubectl delete services $KUBERNETES_APP_NAME
+
+echo "Delete controller"
+kubectl delete rc $KUBERNETES_APP_NAME
 
 echo "Deploying image on GCE"
-kubectl run $KUBERNETES_APP_NAME --image=$GOOGLE_CONTAINER_NAME --port=8080
+kubectl run $KUBERNETES_APP_NAME --image=$GOOGLE_CONTAINER_NAME --port=8000
 
 echo "Exposing a port on GCE"
-kubectl expose rc $KUBERNETES_APP_NAME
+kubectl expose rc $KUBERNETES_APP_NAME --port=433 --target-port=8000 --type=LoadBalancer
 
 echo "Waiting for services to boot"
 
 echo "Listing services on GCE"
 kubectl get services $KUBERNETES_APP_NAME
+
+
+
+

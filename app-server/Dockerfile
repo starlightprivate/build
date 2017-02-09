@@ -1,4 +1,5 @@
 FROM node:6.9.4
+EXPOSE 8000
 RUN mkdir -p /src
 RUN ls mnt
 ADD ./node-api  /src/node-api
@@ -15,10 +16,11 @@ RUN npm install
 RUN gulp build
 
 WORKDIR /src
-RUN rm -rf app-server
-RUN mkdir app-server
-RUN cp -r ./node-api/.dist/* ./app-server
-RUN rm -rf app-server/public
-RUN mkdir ./app-server/public
-RUN cp -r ./flashlightsforever/tacticalsales/*  ./app-server/public
-CMD tar -czf - app-server
+RUN rm -rf server
+RUN mkdir server
+RUN cp -r ./node-api/.dist/* ./server
+RUN rm -rf server/public
+RUN mkdir ./server/public
+RUN cp -r ./flashlightsforever/tacticalsales/*  ./server/public
+CMD tar -czf - server
+CMD ["npm","start"]

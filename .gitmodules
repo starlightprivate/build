@@ -1,6 +1,7 @@
-[submodule "node-api"]
-	path = node-api
+
+[submodule "app-server/node-api"]
+	path = app-server/node-api
 	url = git@github.com:starlightgroup/node-api.git
-[submodule "flashlightsforever"]
-	path = flashlightsforever
+[submodule "app-server/flashlightsforever"]
+	path = app-server/flashlightsforever
 	url = git@github.com:starlightgroup/flashlightsforever.git
