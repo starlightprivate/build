@@ -1,3 +1,3 @@
-docker kill $(docker ps -q)
+docker kill $(docker ps -q) || true
 docker-compose build
 docker-compose up -d
