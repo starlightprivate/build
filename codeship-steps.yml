@@ -1,9 +1,0 @@
-- service: deploystaging
-  command: true
-- service: deploystaging
-  type: push
-  image_name: gcr.io/steady-computer-156807/flashlight-staging
-  registry: https://gcr.io
-  dockercfg_service: gcr_dockercfg
-- service: googleclouddeployment
-  command: /deploy/scripts/deploy_to_google.sh

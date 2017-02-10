@@ -1,2 +1,0 @@
-rsync -avz ~/ Codeship/starlightgroup/build@104.155.238.43:~/
-ssh Codeship/starlightgroup/build@104.155.238.43 './scripts/launch.sh'
