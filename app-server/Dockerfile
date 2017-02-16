@@ -1,5 +1,4 @@
 FROM node:7.5.0
-ENV NODE_ENV=production
 RUN mkdir -p /src
 ADD ./node-api  /src/node-api
 ADD ./flashlightsforever  /src/flashlightsforever
@@ -11,7 +10,7 @@ RUN npm install --only=dev
 RUN npm run build
 
 WORKDIR /src/flashlightsforever
-RUN npm install --only=dev
+RUN npm install
 RUN gulp build
 
 WORKDIR /src
@@ -23,5 +22,6 @@ RUN mkdir ./app-server/public
 RUN cp -r ./flashlightsforever/tacticalsales/*  ./app-server/public
 WORKDIR ./app-server
 RUN npm install
+ENV NODE_ENV=production
 EXPOSE 8000
 CMD ["npm","start"]
