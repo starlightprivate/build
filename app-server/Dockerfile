@@ -1,4 +1,4 @@
-FROM node:6.9.4
+FROM node:7.5.0
 ENV NODE_ENV=production
 RUN mkdir -p /src
 ADD ./node-api  /src/node-api
